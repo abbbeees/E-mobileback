@@ -1,0 +1,77 @@
+<!-- product-filter.component.html -->
+
+<div class="filter-container">
+    <h2>Product Filters</h2>
+  
+    <!-- Price Range Filter -->
+    <div class="filter-section">
+      <h3>Price Range</h3>
+      <div>
+        <label for="minPrice">Min Price:</label>
+        <input type="number" id="minPrice" [(ngModel)]="minPrice" />
+      </div>
+      <div>
+        <label for="maxPrice">Max Price:</label>
+        <input type="number" id="maxPrice" [(ngModel)]="maxPrice" />
+      </div>
+    </div>
+  
+    <!-- Category Filter -->
+    <div class="filter-section">
+      <h3>Category</h3>
+      <select [(ngModel)]="selectedCategory">
+        <option value="category1">Samartphone</option>
+        <option value="category2">accessoires</option>
+        <option value="category2">glasses</option>
+        <!-- Add more categories as needed -->
+      </select>
+    </div>
+  
+<!-- Brand Filter -->
+<div class="filter-section">
+    <h3>Brand</h3>
+    <select [(ngModel)]="selectedBrand">
+      <option value="apple">Apple</option>
+      <option value="samsung">Samsung</option>
+      <option value="huawei">Huawei</option>
+      <option value="xiaomi">Xiaomi</option>
+      <option value="oneplus">OnePlus</option>
+      <option value="google">Google</option>
+      <option value="lg">LG</option>
+      <option value="sony">Sony</option>
+      <option value="nokia">Nokia</option>
+      <option value="motorola">Motorola</option>
+      <!-- Add more brands as needed -->
+    </select>
+  </div>
+  
+  
+    <!-- Storage Filter -->
+    <div class="filter-section">
+      <h3>Storage</h3>
+      <select [(ngModel)]="selectedStorage">
+        <option value="128GB">128GB</option>
+        <option value="256GB">256GB</option>
+        <option value="512GB">512GB</option>
+        <option value="1TB">1TB</option>
+        <option value="2TB">2TB</option>
+      </select>
+    </div>
+  
+    <!-- RAM Filter -->
+    <div class="filter-section">
+      <h3>RAM</h3>
+      <select [(ngModel)]="selectedRAM">
+        <option value="4GB">4GB</option>
+        <option value="8GB">8GB</option>
+        <option value="16GB">16GB</option>
+        <option value="32GB">32GB</option>
+      </select>
+    </div>
+  
+    <!-- Apply Button -->
+    <div class="filter-section">
+      <button (click)="applyFilters()">Apply Filters</button>
+    </div>
+  </div>
+  

@@ -1,0 +1,17 @@
+<div style="display: flex; align-items:center;justify-content:center;">
+  <a class="homebtn" routerLink="/homep"><mat-icon>home</mat-icon></a>
+</div>
+
+<div class="panier">
+    <h2>Votre Panier</h2>
+    
+    <ul>
+      <li *ngFor="let article of articles">
+        <img [src]="article.image" alt="{{ article.nom }}">
+        {{ article.nom }} - {{ article.quantite }} x {{ article.prix }} €
+      </li>
+    </ul>
+  
+    <p>Total : {{ calculerTotal() }} €</p>
+  </div>
+  
